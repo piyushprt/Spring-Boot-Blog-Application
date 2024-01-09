@@ -3,12 +3,10 @@ package com.example.springbootrestapi.service;
 import com.example.springbootrestapi.payload.PostDto;
 import com.example.springbootrestapi.payload.PostResponse;
 
-import java.util.List;
-
 public interface PostService {
     PostDto createPost(PostDto postDto);
 
-    PostResponse getAllPosts(int pageNumber, int pageSize);
+    PostResponse getAllPosts(int pageNumber, int pageSize, String sortBy, String sortDir);
 
     PostDto getPostById(long id);
 
